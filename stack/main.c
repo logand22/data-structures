@@ -3,13 +3,21 @@
 #include "../linkedlist/linkedlist.h"
 
 int main(void) {
-	struct IntStack myStack;
-	myStack.head = NULL;
-	myStack.size = 0;
+	struct IntStack myStack = newIS();
 
-	push(&myStack, 5);
+	pushIS(&myStack, 5);
+	pushIS(&myStack, 7);
+
+	int popValue;
+	popIS(&myStack, &popValue);
+	popIS(&myStack, NULL);
+
+	pushIS(&myStack, 20);
+
 
 	int value;
-	top(&myStack, &value);
+	topIS(&myStack, &value);
 	printf("%d\n", value);
+
+	printf("%d\n", myStack.size);
 }

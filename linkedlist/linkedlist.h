@@ -6,6 +6,9 @@ struct IntLinkedList {
 	int value;
 };
 
+// Returns pointer to new node
+struct IntLinkedList* newIntLinkedList(int value); 	
+
 struct StringLinkedList {
 	struct StringLinkedList* next;
 	char* value;
