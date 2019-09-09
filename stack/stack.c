@@ -14,6 +14,9 @@ struct IntStack newIS(void) {
 
 // retrieve top value on the stack
 int topIS(struct IntStack* stack, int* value) {
+	if(stack == NULL)
+		return -1;
+
 	if(stack->size == 0)
 		return -1;
 	(*value) = stack->head->value;
